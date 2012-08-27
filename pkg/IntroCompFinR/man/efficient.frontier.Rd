@@ -8,6 +8,9 @@ The function constructs the set of efficient portfolios using this method for a 
 }
 \usage{
 efficient.frontier(er, cov.mat, nport = 20, alpha.min = -0.5, alpha.max = 1.5, shorts = TRUE)
+\method{plot}{Markowitz}(object, plot.assets = FALSE, ...)
+\method{print}{Markowitz}(object, ...)
+\method{summary}{Markowitz}(object, risk.free = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -29,6 +32,19 @@ maximum value of alpha, defualt is 1.5
   \item{shorts}{
 logical, allow shorts is TRUE
 }
+  \item{object}{
+object of class Markowitz.
+}
+  \item{plot.assets}{
+logical. If true then plot asset sd and er
+}
+  \item{risk.free}{
+Numeric number of risk free rate
+}
+  \item{\dots}{
+controlled variables for \code{plot()} or \code{print()}
+}
+
 }
 \details{
 The the set of efficient portfolios of risky assets can be computed as a convex combination of any two efficient portfolios. It is convenient to use the global minimum variance portfolio as one portfolio and an efficient portfolio with target expected return equal to the maximum expected return of the assets under consideration as the other portfolio. Call these portfolios m and x, respectively. For any number alpha,

@@ -8,6 +8,11 @@ compute minimum variance portfolio subject to target return
 }
 \usage{
 efficient.portfolio(er, cov.mat, target.return, shorts = TRUE)
+
+\method{plot}{portfolio}(object, ...)
+\method{print}{portfolio}(object, ...)
+\method{summary}{portfolio}(object, risk.free = NULL, ...)
+
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -22,6 +27,15 @@ scalar, target expected return
 }
   \item{shorts}{
 logical, allow shorts is TRUE
+}
+\item{object}{
+object of class portfolio
+}
+  \item{risk.free}{
+Numeric, risk free rate.
+}
+  \item{\dots}{
+controlled variables for generic function \code{print},\code{plot} and \code{summary} 
 }
 }
 \details{

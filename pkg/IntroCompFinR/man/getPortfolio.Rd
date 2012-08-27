@@ -8,6 +8,11 @@ Construct the portfolio with expected return vector and covariance matrix.
 }
 \usage{
 getPortfolio(er, cov.mat, weights)
+
+\method{plot}{portfolio}(object, ...)
+\method{print}{portfolio}(object, ...)
+\method{summary}{portfolio}(object, risk.free = NULL, ...)
+
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -19,6 +24,15 @@ N x N covariance matrix of returns
 }
   \item{weights}{
 N x 1 vector of portfolio weights
+}
+ \item{object}{
+object of class portfolio
+}
+  \item{risk.free}{
+Numeric, risk free rate.
+}
+  \item{\dots}{
+controlled variables for generic function \code{print},\code{plot} and \code{summary} 
 }
 }
 \value{

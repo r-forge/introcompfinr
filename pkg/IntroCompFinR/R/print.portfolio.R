@@ -1,11 +1,11 @@
 print.portfolio <-
-function(x, ...)
+function(object, ...)
 {
   cat("Call:\n")
-  print(x$call, ...)
-  cat("\nPortfolio expected return:    ", format(x$er, ...), "\n")
-  cat("Portfolio standard deviation: ", format(x$sd, ...), "\n")
+  print(object$call, ...)
+  cat("\nPortfolio expected return:    ", format(object$er, ...), "\n")
+  cat("Portfolio standard deviation: ", format(object$sd, ...), "\n")
   cat("Portfolio weights:\n")
-  print(round(x$weights,4), ...)
-  invisible(x)
+  print(round(object$weights,4), ...)
+  invisible(object)
 }
