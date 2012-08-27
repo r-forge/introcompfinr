@@ -1,1 +1,2 @@
-exportPattern("^[^\\.]")
+
+export(efficient.frontier,efficient.portfolio,getPortfolio,globalMin.portfolio,plot.Markowitz,plot.portfolio,print.Markowitz,print.portfolio,summary.Markowitz,summary.portfolio,tangency.portfolio)
