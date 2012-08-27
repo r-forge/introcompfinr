@@ -1,0 +1,8 @@
+exportPattern("^[^\\.]")
+S3method(print, Markowitz)
+S3method(print, portfolio)
+S3method(plot, Markowitz)
+S3method(plot, portfolio)
+S3method(print, summary.Markoqitz)
+S3method(summary,Markowitz)
+S3method(summary,portfolio)
