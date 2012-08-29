@@ -1,7 +1,7 @@
 \name{getPortfolio}
 \alias{getPortfolio}
 \title{
-Construct the portfolio with expected return vector and covariance matrix.
+create portfolio object
 }
 \description{
 Construct the portfolio with expected return vector and covariance matrix.
@@ -49,9 +49,10 @@ Portfolio standard deviation.
 Portfolio weights.   
 }
 }
-\references{
-%% ~put references to the literature/web site here ~
+\details{
+To specify a portfolio, an expected return vector and covariance matrix for the assets under consideration as well as a vector of portfolio weights are needed.
 }
+
 \author{
 Eric Zivot
 }

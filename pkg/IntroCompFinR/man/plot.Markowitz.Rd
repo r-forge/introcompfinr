@@ -1,10 +1,10 @@
 \name{plot.Markowitz}
 \alias{plot.Markowitz}
 \title{
-Plot efficient frontier
+Plot method of Markowitz class
 }
 \description{
-plot efficient frontier
+plot efficient frontier. 
 }
 \usage{
 \S3method{plot}{Markowitz}(object, plot.assets = FALSE, ...)
@@ -22,10 +22,6 @@ controlled variables for \code{plot()}
 }
 }
 
-
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Eric Zivot
 }

@@ -1,10 +1,10 @@
 \name{plot.portfolio}
 \alias{plot.portfolio}
 \title{
-Plot portfolio weight
+Plotting method of portfolio class
 }
 \description{
-plot portfolio weight
+The \code{plot()} method shows a bar chart of the portfolio weights
 }
 \usage{
 \S3method{plot}{portfolio}(object, ...)

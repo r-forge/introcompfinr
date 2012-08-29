@@ -1,7 +1,7 @@
 \name{efficient.frontier}
 \alias{efficient.frontier}
 \title{
-Compute efficient frontier with no short-sales constraints
+Compute efficient frontier.
 }
 \description{
 The function constructs the set of efficient portfolios using this method for a collection of alpha values.
@@ -64,9 +64,7 @@ another efficient portfolio can be computed as \eqn{z = \alpha m+ (1 ??? \alpha)
   nport x N matrix of weights on efficient portfolios
   }
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
+
 \author{
 Eric Zivot
 }

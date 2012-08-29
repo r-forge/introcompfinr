@@ -1,10 +1,10 @@
 \name{print.portfolio}
 \alias{print.portfolio}
 \title{
-print method of class portfolio
+printing method of portfolio class
 }
 \description{
-print method of class portfolio
+printing method of portfolio class
 }
 \usage{
 \S3method{print}{portfolio}(x, ...)

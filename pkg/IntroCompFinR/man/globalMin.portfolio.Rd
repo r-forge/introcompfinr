@@ -52,9 +52,7 @@ min \eqn{ t(m)\Sigma m } st. t(m)1=1
   N x 1 vector of portfolio weights
   }
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
+
 \author{
 Eric Zivot
 }

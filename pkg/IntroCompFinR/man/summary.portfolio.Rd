@@ -1,10 +1,10 @@
 \name{summary.portfolio}
 \alias{summary.portfolio}
 \title{
-summary method of class portfolio
+summary method of portfolio class
 }
 \description{
-summary method of class portfolio
+summary method of portfolio class
 }
 \usage{
 \S3method{summary}{portfolio}(object, risk.free = NULL, ...)

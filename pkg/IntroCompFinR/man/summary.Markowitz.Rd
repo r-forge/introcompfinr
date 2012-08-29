@@ -1,10 +1,10 @@
 \name{summary.Markowitz}
 \alias{summary.Markowitz}
 \title{
-summary method of efficient frontier function
+summary method of Markowitz class
 }
 \description{
-summary method of efficient frontier function. The class \code{summary.Markozitz} will be created.
+summary method of efficient frontier function. The weights of the portfolio will be shown. The class \code{summary.Markozitz} will be created.
 }
 \usage{
 \S3method{summary}{Markowitz}(object, risk.free = NULL)
