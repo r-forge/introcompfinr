@@ -1,3 +1,51 @@
+#' @title Compute tangency portfolio
+#' 
+#' @author Eric Zivot
+#' 
+#' @description
+#' Compute tangency portfolio.
+#' 
+#' @details 
+#' The tangency portfolio t is the portfolio of risky assets with the highest Sharpe's slope and
+#' solves the optimization problem: max \eqn{(t(t)\mu-r_f)/(t(t)\Sigma t^{1/2})} s.t. \eqn{t(t)1=1}
+#' where \eqn{r_f} denotes the risk-free rate.
+#' 
+#' @param er N x 1 vector of expected returns
+#' @param cov.mat N x N return covariance matrix
+#' @param risk.free numeric, risk free rate
+#' @param shorts logical, allow shorts is \code{TRUE}
+#' @param object object of class Markowitz
+#' @param ... controlled variables for \code{plot()}, \code{print()} and \code{summary()}
+#' 
+#' @return 
+#'  \item{call}{captures function call}
+#'  \item{er}{portfolio expected return}
+#'  \item{sd}{portfolio standard deviation}
+#'  \item{weights}{N x 1 vector of portfolio weights}
+#' 
+#' @examples
+#' asset.names = c("MSFT", "NORD", "SBUX")
+#' er = c(0.0427, 0.0015, 0.0285)
+#' names(er) = asset.names
+#' covmat = matrix(c(0.0100, 0.0018, 0.0011,
+#'                   0.0018, 0.0109, 0.0026,
+#'                   0.0011, 0.0026, 0.0199),
+#'                 nrow=3, ncol=3)
+#' r.free = 0.005
+#' dimnames(covmat) = list(asset.names, asset.names)
+#' 
+#' # compute tangency portfolio
+#' tan.port <- tangency.portfolio(er, covmat, r.free)
+#' tan.port
+#' summary(tan.port, risk.free=r.free)
+#' plot(tan.port, col="blue")
+#' 
+#' # compute tangency portfolio with no short sales
+#' tan.port.ns <- tangency.portfolio(er, covmat, r.free, shorts=FALSE)
+#' tan.port.ns
+#' summary(tan.port.ns, risk.free=r.free)
+#' plot(tan.port.ns, col="blue")
+
 tangency.portfolio <-
 function(er,cov.mat,risk.free, shorts=TRUE)
 {

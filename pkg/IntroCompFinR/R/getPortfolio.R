@@ -1,3 +1,51 @@
+#' @title Create portfolio object
+#' 
+#' @author Eric Zivot
+#' 
+#' @description
+#' Construct the portfolio with expected return vector and covariance matrix.
+#' 
+#' @details 
+#' To specify a portfolio, an expected return vector and covariance matrix for the assets under
+#' consideration as well as a vector of portfolio weights are needed.
+#' 
+#' @param er N x 1 vector of expected returns
+#' @param cov.mat N x N return covariance matrix
+#' @param weigths N x 1 vector of portfolio weights
+#' @param object object of class portfolio
+#' @param risk.free numeric, risk free rate
+#' @param ... controlled variables for \code{plot()}, \code{print()} and \code{summary()}
+#' 
+#' @return 
+#'  \item{call}{captures function call}
+#'  \item{er}{portfolio expected return}
+#'  \item{sd}{portfolio standard deviation}
+#'  \item{weights}{N x 1 vector of portfolio weights}
+#' 
+#' @examples
+#' # Examples from Introduction to Financial Econometrics
+#' asset.names = c("MSFT", "NORD", "SBUX")
+#' er = c(0.0427, 0.0015, 0.0285)
+#' names(er) = asset.names
+#' covmat = matrix(c(0.0100, 0.0018, 0.0011,
+#'                   0.0018, 0.0109, 0.0026,
+#'                   0.0011, 0.0026, 0.0199),
+#'                 nrow=3, ncol=3)
+#' r.free = 0.005
+#' dimnames(covmat) = list(asset.names, asset.names)
+#' er
+#' covmat
+#' r.free
+#' 
+#' # compute equally weighted portfolio
+#' ew = rep(1,3)/3
+#' equalWeight.portfolio = getPortfolio(er=er,cov.mat=covmat,weights=ew)
+#' class(equalWeight.portfolio)
+#' names(equalWeight.portfolio)
+#' equalWeight.portfolio
+#' summary(equalWeight.portfolio)
+#' plot(equalWeight.portfolio, col="blue")
+
 getPortfolio <-
 function(er, cov.mat, weights)
 {

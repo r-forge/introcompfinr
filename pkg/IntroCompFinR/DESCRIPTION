@@ -1,11 +1,14 @@
 Package: IntroCompFinR
 Type: Package
-Title: Introduction to computational Finance in R
+Title: Introduction to Computational Finance in R
 Version: 1.0
 Date: 2012-08-26
 Author: Eric Zivot
 Maintainer: Eric Zivot <ezivot@uw.edu>
-Description: The package is for the introduction to computational finance in R for Econ 424 in University of Washington, Seattle. There are examples and function for demonstration and teaching purpose. Students are expected to download the package and learn from the codes and examples.  Moreover, the book coming soon is also based on this package.
+Description: The package is for the introduction to computational finance in R for Econ 424 in
+  University of Washington, Seattle. There are examples and function for demonstration and teaching
+  purpose. Students are expected to download the package and learn from the codes and examples. 
+  Moreover, the book coming soon is also based on this package.
 License: GPL-2
 Depends: R (>= 2.12.2),quadprog,tseries,zoo
 LazyLoad: yes

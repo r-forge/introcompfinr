@@ -1,3 +1,52 @@
+#' @title Compute global minimum variance portfolio
+#' 
+#' @author Eric Zivot
+#' 
+#' @description
+#' Compute global minimum variance portfolio.
+#' 
+#' @details 
+#' The global minimum variance portfolio (allowing for short sales) \eqn{m} solves the optimization
+#' problem: min \eqn{t(m)\Sigma m} s.t. \eqn{t(m)1=1}.
+#' 
+#' @param er N x 1 vector of expected returns
+#' @param cov.mat N x N return covariance matrix
+#' @param shorts logical, allow shorts is \code{TRUE}
+#' @param object object of class portfolio
+#' @param risk.free numeric, risk free rate
+#' @param ... controlled variables for \code{plot()}, \code{print()} and \code{summary()}
+#' 
+#' @return 
+#'  \item{call}{captures function call}
+#'  \item{er}{portfolio expected return}
+#'  \item{sd}{portfolio standard deviation}
+#'  \item{weights}{N x 1 vector of portfolio weights}
+#' 
+#' @examples
+#' asset.names = c("MSFT", "NORD", "SBUX")
+#' er = c(0.0427, 0.0015, 0.0285)
+#' names(er) = asset.names
+#' covmat = matrix(c(0.0100, 0.0018, 0.0011,
+#'                   0.0018, 0.0109, 0.0026,
+#'                   0.0011, 0.0026, 0.0199),
+#'                 nrow=3, ncol=3)
+#' r.free = 0.005
+#' dimnames(covmat) = list(asset.names, asset.names)
+#'
+#' # compute global minimum variance portfolio
+#' gmin.port = globalMin.portfolio(er, covmat)
+#' attributes(gmin.port)
+#' print(gmin.port)
+#' summary(gmin.port, risk.free=r.free)
+#' plot(gmin.port, col="blue")
+#' 
+#' # compute global minimum variance portfolio with no short sales
+#' gmin.port.ns = globalMin.portfolio(er, covmat, shorts=FALSE)
+#' attributes(gmin.port.ns)
+#' print(gmin.port.ns)
+#' summary(gmin.port.ns, risk.free=r.free)
+#' plot(gmin.port.ns, col="blue")
+
 globalMin.portfolio <-
 function(er, cov.mat, shorts=TRUE)
 {

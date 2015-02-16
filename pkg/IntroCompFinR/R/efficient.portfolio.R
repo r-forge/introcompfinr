@@ -1,3 +1,54 @@
+#' @title Compute minimum variance portfolio subject to target return
+#' 
+#' @author Eric Zivot
+#' 
+#' @description
+#' Compute minimum variance portfolio subject to target return.
+#' 
+#' @details 
+#' A mean-variance efficient portfolio \eqn{x} that achieves the target expected return \eqn{\mu_0}
+#' solves the optimization problem: min \eqn{t(x)\Sigma x} s.t. \eqn{t(x)1=1} and 
+#' \eqn{t(x)\mu=\mu_0} 
+#' 
+#' @param er N x 1 vector of expected returns
+#' @param cov.mat N x N return covariance matrix
+#' @param target.return scalar, target expected return
+#' @param shorts logical, allow shorts is \code{TRUE}
+#' @param object object of class portfolio
+#' @param risk.free numeric, risk free rate
+#' @param ... controlled variables for \code{plot()}, \code{print()} and \code{summary()}
+#' 
+#' @return 
+#'  \item{call}{captures function call}
+#'  \item{er}{portfolio expected return}
+#'  \item{sd}{portfolio standard deviation}
+#'  \item{weights}{N x 1 vector of portfolio weights}
+#' 
+#' @examples
+#' asset.names = c("MSFT", "NORD", "SBUX")
+#' er = c(0.0427, 0.0015, 0.0285)
+#' names(er) = asset.names
+#' covmat = matrix(c(0.0100, 0.0018, 0.0011,
+#'                   0.0018, 0.0109, 0.0026,
+#'                   0.0011, 0.0026, 0.0199),
+#'                 nrow=3, ncol=3)
+#' r.free = 0.005
+#' dimnames(covmat) = list(asset.names, asset.names)
+#'
+#' # compute efficient portfolio subject to target return
+#' target.return = er["MSFT"]
+#' e.port.msft = efficient.portfolio(er, covmat, target.return)
+#' e.port.msft
+#' summary(e.port.msft, risk.free=r.free)
+#' plot(e.port.msft, col="blue")
+#' 
+#' # compute efficient portfolio subject to target return with no short sales
+#' target.return = er["MSFT"]
+#' e.port.msft.ns = efficient.portfolio(er, covmat, target.return, shorts=FALSE)
+#' e.port.msft.ns
+#' summary(e.port.msft.ns, risk.free=r.free)
+#' plot(e.port.msft.ns, col="blue")
+
 efficient.portfolio <-
 function(er, cov.mat, target.return, shorts=TRUE)
 {
