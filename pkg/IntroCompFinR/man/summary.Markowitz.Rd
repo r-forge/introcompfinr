@@ -16,7 +16,7 @@ Summary method of efficient frontier function. The weights of the portfolio will
 class \code{summary.Markozitz} will be created.
 }
 \examples{
-construct the data
+# construct the data
 asset.names = c("MSFT", "NORD", "SBUX")
 er = c(0.0427, 0.0015, 0.0285)
 names(er) = asset.names

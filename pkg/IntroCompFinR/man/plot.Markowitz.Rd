@@ -17,7 +17,7 @@
 Plot efficient frontier.
 }
 \examples{
-construct the data
+# construct the data
 asset.names = c("MSFT", "NORD", "SBUX")
 er = c(0.0427, 0.0015, 0.0285)
 names(er) = asset.names
