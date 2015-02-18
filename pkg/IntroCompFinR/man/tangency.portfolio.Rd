@@ -14,10 +14,6 @@ tangency.portfolio(er, cov.mat, risk.free, shorts = TRUE)
 \item{risk.free}{numeric, risk free rate}
 
 \item{shorts}{logical, allow shorts is \code{TRUE}}
-
-\item{object}{object of class Markowitz}
-
-\item{...}{controlled variables for \code{plot()}, \code{print()} and \code{summary()}}
 }
 \value{
 \item{call}{captures function call}
@@ -34,6 +30,7 @@ solves the optimization problem: max \eqn{(t(t)\mu-r_f)/(t(t)\Sigma t^{1/2})} s.
 where \eqn{r_f} denotes the risk-free rate.
 }
 \examples{
+# construct the data
 asset.names = c("MSFT", "NORD", "SBUX")
 er = c(0.0427, 0.0015, 0.0285)
 names(er) = asset.names

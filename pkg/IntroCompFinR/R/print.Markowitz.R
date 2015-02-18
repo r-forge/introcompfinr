@@ -6,7 +6,7 @@
 #' Print efficient frontier
 #' 
 #' @param object object of class Markowitz
-#' @param ... controlled variables for \code{print()}
+#' @param ... additional arguments passed to \code{print()}
 #' 
 #' @examples
 #' # construct the data
@@ -30,6 +30,8 @@
 #'                          alpha.max=1.5, nport=20)
 #' attributes(ef)
 #' print(ef)
+#' 
+#' @export print.Markowitz
 
 print.Markowitz <-
 function(object, ...)

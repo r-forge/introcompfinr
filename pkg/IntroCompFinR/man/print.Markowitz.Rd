@@ -9,7 +9,7 @@
 \arguments{
 \item{object}{object of class Markowitz}
 
-\item{...}{controlled variables for \code{print()}}
+\item{...}{additional arguments passed to \code{print()}}
 }
 \description{
 Print efficient frontier

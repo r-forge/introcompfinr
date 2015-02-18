@@ -11,12 +11,13 @@
 
 \item{risk.free}{numeric, risk free rate}
 
-\item{...}{controlled variables for \code{summary()}}
+\item{...}{additional arguments passed to \code{summary()}}
 }
 \description{
 Summary method of class portfolio.
 }
 \examples{
+# construct the data
 asset.names = c("MSFT", "NORD", "SBUX")
 er = c(0.0427, 0.0015, 0.0285)
 names(er) = asset.names

@@ -11,13 +11,7 @@ getPortfolio(er, cov.mat, weights)
 
 \item{cov.mat}{N x N return covariance matrix}
 
-\item{weigths}{N x 1 vector of portfolio weights}
-
-\item{object}{object of class portfolio}
-
-\item{risk.free}{numeric, risk free rate}
-
-\item{...}{controlled variables for \code{plot()}, \code{print()} and \code{summary()}}
+\item{weights}{N x 1 vector of portfolio weights}
 }
 \value{
 \item{call}{captures function call}
@@ -33,7 +27,7 @@ To specify a portfolio, an expected return vector and covariance matrix for the 
 consideration as well as a vector of portfolio weights are needed.
 }
 \examples{
-# Examples from Introduction to Financial Econometrics
+# construct the data
 asset.names = c("MSFT", "NORD", "SBUX")
 er = c(0.0427, 0.0015, 0.0285)
 names(er) = asset.names

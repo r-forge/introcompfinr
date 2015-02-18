@@ -19,14 +19,6 @@ efficient.frontier(er, cov.mat, nport = 20, alpha.min = -0.5,
 \item{alpha.max}{maximum value of alpha, defualt is 1.5}
 
 \item{shorts}{logical, allow shorts is \code{TRUE}}
-
-\item{object}{object of class Markowitz}
-
-\item{plot.assets}{logical, if \code{TRUE} then plot asset \code{sd} and \code{er}}
-
-\item{risk.free}{numeric, risk free rate}
-
-\item{...}{controlled variables for \code{plot()} or \code{print()}}
 }
 \value{
 \item{call}{captures function call}
@@ -44,7 +36,7 @@ any two efficient portfolios. It is convenient to use the global minimum varianc
 one portfolio and an efficient portfolio with target expected return equal to the maximum
 expected return of the assets under consideration as the other portfolio. Call these portfolios
 \eqn{m} and \eqn{x}, respectively. For any number alpha, another efficient
-portfolio can be computed as \eqn{z=\alpha m+(1-\alpha)x}.
+portfolio can be computed as \eqn{z=\alpha m+(1-\alpha)x}
 }
 \examples{
 # construct the data

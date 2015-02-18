@@ -14,12 +14,6 @@ efficient.portfolio(er, cov.mat, target.return, shorts = TRUE)
 \item{target.return}{scalar, target expected return}
 
 \item{shorts}{logical, allow shorts is \code{TRUE}}
-
-\item{object}{object of class portfolio}
-
-\item{risk.free}{numeric, risk free rate}
-
-\item{...}{controlled variables for \code{plot()}, \code{print()} and \code{summary()}}
 }
 \value{
 \item{call}{captures function call}
@@ -36,6 +30,7 @@ solves the optimization problem: min \eqn{t(x)\Sigma x} s.t. \eqn{t(x)1=1} and
 \eqn{t(x)\mu=\mu_0}
 }
 \examples{
+# construct the data
 asset.names = c("MSFT", "NORD", "SBUX")
 er = c(0.0427, 0.0015, 0.0285)
 names(er) = asset.names

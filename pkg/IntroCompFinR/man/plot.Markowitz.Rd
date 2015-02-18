@@ -11,7 +11,7 @@
 
 \item{plot.assets}{if \code{TRUE} then plot asset \code{sd} and \code{er}}
 
-\item{...}{controlled variables for \code{plot()}}
+\item{...}{additional arguments passed to \code{plot()}}
 }
 \description{
 Plot efficient frontier.

@@ -9,12 +9,13 @@
 \arguments{
 \item{object}{object of class portfolio}
 
-\item{...}{controlled variables for \code{print()}}
+\item{...}{additional arguments passed to \code{print()}}
 }
 \description{
 Print method of class portfolio.
 }
 \examples{
+# construct the data
 asset.names = c("MSFT", "NORD", "SBUX")
 er = c(0.0427, 0.0015, 0.0285)
 names(er) = asset.names

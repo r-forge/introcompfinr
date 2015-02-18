@@ -11,10 +11,7 @@
 #' 
 #' @param er N x 1 vector of expected returns
 #' @param cov.mat N x N return covariance matrix
-#' @param weigths N x 1 vector of portfolio weights
-#' @param object object of class portfolio
-#' @param risk.free numeric, risk free rate
-#' @param ... controlled variables for \code{plot()}, \code{print()} and \code{summary()}
+#' @param weights N x 1 vector of portfolio weights
 #' 
 #' @return 
 #'  \item{call}{captures function call}
@@ -23,7 +20,7 @@
 #'  \item{weights}{N x 1 vector of portfolio weights}
 #' 
 #' @examples
-#' # Examples from Introduction to Financial Econometrics
+#' # construct the data
 #' asset.names = c("MSFT", "NORD", "SBUX")
 #' er = c(0.0427, 0.0015, 0.0285)
 #' names(er) = asset.names
@@ -45,23 +42,12 @@
 #' equalWeight.portfolio
 #' summary(equalWeight.portfolio)
 #' plot(equalWeight.portfolio, col="blue")
+#' 
+#' @export getPortfolio
 
 getPortfolio <-
 function(er, cov.mat, weights)
 {
-	# contruct portfolio object
-	#
-	# inputs:
-	# er				   N x 1 vector of expected returns
-	# cov.mat  		 N x N covariance matrix of returns
-	# weights			 N x 1 vector of portfolio weights
-	#
-	# output is portfolio object with the following elements
-	# call				original function call
-	# er				  portfolio expected return
-	# sd				  portfolio standard deviation
-	# weights			N x 1 vector of portfolio weights
-	#
 	call <- match.call()
 	
 	#
@@ -70,7 +56,7 @@ function(er, cov.mat, weights)
 	asset.names <- names(er)
 	weights <- as.vector(weights)
 	names(weights) = names(er)
-  er <- as.vector(er)					# assign names if none exist
+  er <- as.vector(er) # assign names if none exist
 	if(length(er) != length(weights))
 		stop("dimensions of er and weights do not match")
  	cov.mat <- as.matrix(cov.mat)

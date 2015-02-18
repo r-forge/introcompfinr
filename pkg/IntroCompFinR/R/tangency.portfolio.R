@@ -14,8 +14,6 @@
 #' @param cov.mat N x N return covariance matrix
 #' @param risk.free numeric, risk free rate
 #' @param shorts logical, allow shorts is \code{TRUE}
-#' @param object object of class Markowitz
-#' @param ... controlled variables for \code{plot()}, \code{print()} and \code{summary()}
 #' 
 #' @return 
 #'  \item{call}{captures function call}
@@ -24,6 +22,7 @@
 #'  \item{weights}{N x 1 vector of portfolio weights}
 #' 
 #' @examples
+#' # construct the data
 #' asset.names = c("MSFT", "NORD", "SBUX")
 #' er = c(0.0427, 0.0015, 0.0285)
 #' names(er) = asset.names
@@ -45,23 +44,12 @@
 #' tan.port.ns
 #' summary(tan.port.ns, risk.free=r.free)
 #' plot(tan.port.ns, col="blue")
+#' 
+#' @export tangency.portfolio
 
 tangency.portfolio <-
 function(er,cov.mat,risk.free, shorts=TRUE)
 {
-  # compute tangency portfolio
-  #
-  # inputs:
-  # er				   N x 1 vector of expected returns
-  # cov.mat		   N x N return covariance matrix
-  # risk.free		 scalar, risk-free rate
-  # shorts          logical, allow shorts is TRUE
-  #
-  # output is portfolio object with the following elements
-  # call			  captures function call
-  # er				  portfolio expected return
-  # sd				  portfolio standard deviation
-  # weights		 N x 1 vector of portfolio weights
   call <- match.call()
 
   #
@@ -92,7 +80,7 @@ function(er,cov.mat,risk.free, shorts=TRUE)
   if(shorts==TRUE){
     cov.mat.inv <- solve(cov.mat)
     w.t <- cov.mat.inv %*% (er - risk.free) # tangency portfolio
-    w.t <- as.vector(w.t/sum(w.t))	# normalize weights
+    w.t <- as.vector(w.t/sum(w.t))          # normalize weights
   } else if(shorts==FALSE){
     Dmat <- 2*cov.mat
     dvec <- rep.int(0, N)

@@ -7,7 +7,7 @@
 #' 
 #' @param object object of class Markowitz
 #' @param plot.assets if \code{TRUE} then plot asset \code{sd} and \code{er}
-#' @param ... controlled variables for \code{plot()}
+#' @param ... additional arguments passed to \code{plot()}
 #' 
 #' @examples
 #' # construct the data
@@ -39,10 +39,11 @@
 #' text(tan.port$sd, tan.port$er, labels="TANGENCY", pos=2)    
 #' sr.tan = (tan.port$er - r.free)/tan.port$sd
 #' abline(a=r.free, b=sr.tan, col="green", lwd=2)
+#' 
+#' @export plot.Markowitz
 
 plot.Markowitz <-
 function(object, plot.assets=FALSE, ...)
-# plot.assets		logical. If true then plot asset sd and er
 {
   if (!plot.assets) {
      y.lim=c(0,max(object$er))

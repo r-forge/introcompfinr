@@ -7,9 +7,10 @@
 #' 
 #' @param object object of class portfolio
 #' @param risk.free numeric, risk free rate
-#' @param ... controlled variables for \code{summary()}
+#' @param ... additional arguments passed to \code{summary()}
 #' 
 #' @examples
+#' # construct the data
 #' asset.names = c("MSFT", "NORD", "SBUX")
 #' er = c(0.0427, 0.0015, 0.0285)
 #' names(er) = asset.names
@@ -24,12 +25,11 @@
 #' ew = rep(1,3)/3
 #' equalWeight.portfolio = getPortfolio(er=er,cov.mat=covmat,weights=ew)
 #' summary(equalWeight.portfolio)
+#' 
+#' @export summary.portfolio
 
 summary.portfolio <-
 function(object, risk.free=NULL, ...)
-# risk.free			risk-free rate. If not null then
-#				compute and print Sharpe ratio
-# 
 {
   cat("Call:\n")
   print(object$call)

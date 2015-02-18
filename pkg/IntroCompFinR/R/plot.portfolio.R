@@ -6,9 +6,10 @@
 #' The \code{plot()} method shows a bar chart of the portfolio weights.
 #' 
 #' @param object object of class portfolio
-#' @param ... controlled variables for \code{barplot()}
+#' @param ... additional arguments passed to \code{barplot()}
 #' 
 #' @examples
+#' # construct the data
 #' asset.names = c("MSFT", "NORD", "SBUX")
 #' er = c(0.0427, 0.0015, 0.0285)
 #' names(er) = asset.names
@@ -23,6 +24,8 @@
 #' ew = rep(1,3)/3
 #' equalWeight.portfolio = getPortfolio(er=er,cov.mat=covmat,weights=ew)
 #' plot(equalWeight.portfolio, col="blue")
+#' 
+#' @export plot.portfolio
 
 plot.portfolio <-
 function(object, ...)

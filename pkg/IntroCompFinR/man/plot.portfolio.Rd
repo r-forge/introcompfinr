@@ -9,12 +9,13 @@
 \arguments{
 \item{object}{object of class portfolio}
 
-\item{...}{controlled variables for \code{barplot()}}
+\item{...}{additional arguments passed to \code{barplot()}}
 }
 \description{
 The \code{plot()} method shows a bar chart of the portfolio weights.
 }
 \examples{
+# construct the data
 asset.names = c("MSFT", "NORD", "SBUX")
 er = c(0.0427, 0.0015, 0.0285)
 names(er) = asset.names

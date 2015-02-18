@@ -31,6 +31,8 @@
 #'                          alpha.max=1.5, nport=20)
 #' attributes(ef)
 #' summary(ef)
+#' 
+#' @export summary.Markowitz
 
 summary.Markowitz <-
 function(object, risk.free=NULL)
@@ -53,11 +55,11 @@ function(object, risk.free=NULL)
     #
     # compute tangency portfolio
     tan.port <- tangency.portfolio(er,cov.mat,risk.free)
-    x.t <- sd.e/tan.port$sd		# weights in tangency port
-    rf <- 1 - x.t			# weights in t-bills
+    x.t <- sd.e/tan.port$sd		                        # weights in tangency port
+    rf <- 1 - x.t			                                # weights in t-bills
     er.e <- risk.free + x.t*(tan.port$er - risk.free)
     names(er.e) <- port.names
-    we.mat <- x.t %o% tan.port$weights	# rows are efficient portfolios
+    we.mat <- x.t %o% tan.port$weights	              # rows are efficient portfolios
     dimnames(we.mat) <- list(port.names, asset.names)
     we.mat <- cbind(rf,we.mat) 
   }

@@ -12,12 +12,6 @@ globalMin.portfolio(er, cov.mat, shorts = TRUE)
 \item{cov.mat}{N x N return covariance matrix}
 
 \item{shorts}{logical, allow shorts is \code{TRUE}}
-
-\item{object}{object of class portfolio}
-
-\item{risk.free}{numeric, risk free rate}
-
-\item{...}{controlled variables for \code{plot()}, \code{print()} and \code{summary()}}
 }
 \value{
 \item{call}{captures function call}
@@ -33,6 +27,7 @@ The global minimum variance portfolio (allowing for short sales) \eqn{m} solves 
 problem: min \eqn{t(m)\Sigma m} s.t. \eqn{t(m)1=1}.
 }
 \examples{
+# construct the data
 asset.names = c("MSFT", "NORD", "SBUX")
 er = c(0.0427, 0.0015, 0.0285)
 names(er) = asset.names

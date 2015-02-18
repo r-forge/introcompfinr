@@ -6,9 +6,10 @@
 #' Print method of class portfolio.
 #' 
 #' @param object object of class portfolio
-#' @param ... controlled variables for \code{print()}
+#' @param ... additional arguments passed to \code{print()}
 #' 
 #' @examples
+#' # construct the data
 #' asset.names = c("MSFT", "NORD", "SBUX")
 #' er = c(0.0427, 0.0015, 0.0285)
 #' names(er) = asset.names
@@ -23,6 +24,8 @@
 #' ew = rep(1,3)/3
 #' equalWeight.portfolio = getPortfolio(er=er,cov.mat=covmat,weights=ew)
 #' print(equalWeight.portfolio)
+#' 
+#' @export print.portfolio
 
 print.portfolio <-
 function(object, ...)

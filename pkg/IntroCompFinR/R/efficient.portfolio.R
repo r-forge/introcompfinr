@@ -14,9 +14,6 @@
 #' @param cov.mat N x N return covariance matrix
 #' @param target.return scalar, target expected return
 #' @param shorts logical, allow shorts is \code{TRUE}
-#' @param object object of class portfolio
-#' @param risk.free numeric, risk free rate
-#' @param ... controlled variables for \code{plot()}, \code{print()} and \code{summary()}
 #' 
 #' @return 
 #'  \item{call}{captures function call}
@@ -25,6 +22,7 @@
 #'  \item{weights}{N x 1 vector of portfolio weights}
 #' 
 #' @examples
+#' # construct the data
 #' asset.names = c("MSFT", "NORD", "SBUX")
 #' er = c(0.0427, 0.0015, 0.0285)
 #' names(er) = asset.names
@@ -48,31 +46,19 @@
 #' e.port.msft.ns
 #' summary(e.port.msft.ns, risk.free=r.free)
 #' plot(e.port.msft.ns, col="blue")
+#' 
+#' @export efficient.portfolio
 
 efficient.portfolio <-
 function(er, cov.mat, target.return, shorts=TRUE)
 {
-  # compute minimum variance portfolio subject to target return
-  #
-  # inputs:
-  # er					    N x 1 vector of expected returns
-  # cov.mat  			  N x N covariance matrix of returns
-  # target.return	  scalar, target expected return
-  # shorts          logical, allow shorts is TRUE
-  #
-  # output is portfolio object with the following elements
-  # call				    original function call
-  # er					    portfolio expected return
-  # sd					    portfolio standard deviation
-  # weights			    N x 1 vector of portfolio weights
-  #
   call <- match.call()
 
   #
   # check for valid inputs
   #
   asset.names <- names(er)
-  er <- as.vector(er)					# assign names if none exist
+  er <- as.vector(er) # assign names if none exist
   N <- length(er)
   cov.mat <- as.matrix(cov.mat)
   if(N != nrow(cov.mat))
