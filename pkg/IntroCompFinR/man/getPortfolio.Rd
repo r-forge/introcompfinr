@@ -7,24 +7,27 @@
 getPortfolio(er, cov.mat, weights)
 }
 \arguments{
-\item{er}{N x 1 vector of expected returns}
+\item{er}{\samp{N x 1} vector of expected returns}
 
-\item{cov.mat}{N x N return covariance matrix}
+\item{cov.mat}{\samp{N x N} return covariance matrix}
 
-\item{weights}{N x 1 vector of portfolio weights}
+\item{weights}{\samp{N x 1} vector of portfolio weights}
 }
 \value{
 \item{call}{captures function call}
  \item{er}{portfolio expected return}
  \item{sd}{portfolio standard deviation}
- \item{weights}{N x 1 vector of portfolio weights}
+ \item{weights}{\samp{N x 1} vector of portfolio weights}
 }
 \description{
-Construct the portfolio with expected return vector and covariance matrix.
+Create a portfolio object from expected return vector, covariance matrix, and weight vector.
 }
 \details{
 To specify a portfolio, an expected return vector and covariance matrix for the assets under
-consideration as well as a vector of portfolio weights are needed.
+consideration as well as a vector of portfolio weights are needed. The result of \code{getPortfolio}
+is a \samp{portfolio} object, which is list with components for the portfolio expected return,
+portfolio standard deviation, and portfolio weights. There are \code{print}, \code{summary} and \code{plot}
+methods.
 }
 \examples{
 # construct the data

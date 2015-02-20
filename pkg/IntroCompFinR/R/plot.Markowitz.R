@@ -3,10 +3,12 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' Plot efficient frontier.
+#' Plot efficient frontier. The efficient frontier is a plot of portfolio expected return vs. portfolio
+#' standard deviation for a collection of mean-variance efficient portfolios - portfolios that minimize vriance
+#' subject to a target expected return.
 #' 
 #' @param object object of class Markowitz
-#' @param plot.assets if \code{TRUE} then plot asset \code{sd} and \code{er}
+#' @param plot.assets if \code{TRUE} then plot asset \code{sd} and \code{er} with asset name labels
 #' @param ... additional arguments passed to \code{plot()}
 #' 
 #' @examples

@@ -12,7 +12,7 @@
 \item{...}{additional arguments passed to \code{print()}}
 }
 \description{
-Print efficient frontier
+Print method for \samp{Markowitz} objects.
 }
 \examples{
 # construct the data

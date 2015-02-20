@@ -3,29 +3,37 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' The function constructs the set of efficient portfolios using this method (see details) for a
-#' collection of alpha values.
+#' The function constructs the set of mean-variance efficient portfolios that either allow all assets to be
+#' sold short or not allow any asset to be sold short. The returned object is of class \samp{Markowitz} for 
+#' which there are \code{print}, \code{summary} and \code{plot} methods.
 #' 
 #' @details 
-#' The the set of efficient portfolios of risky assets can be computed as a convex combination of
+#' If short sales are allowed (negative weights) then the set of efficient portfolios of risky assets 
+#' can be computed as a convex combination of
 #' any two efficient portfolios. It is convenient to use the global minimum variance portfolio as
 #' one portfolio and an efficient portfolio with target expected return equal to the maximum
 #' expected return of the assets under consideration as the other portfolio. Call these portfolios
-#' \eqn{m} and \eqn{x}, respectively. For any number alpha, another efficient
-#' portfolio can be computed as \eqn{z=\alpha m+(1-\alpha)x}
+#' \eqn{m} and \eqn{x}, respectively. Then for any number \samp{alpha}, another efficient
+#' portfolio can be computed as \eqn{z=\alpha m+(1-\alpha)x}. If short sales are not allowed, then the set
+#' of efficient portfolios is computed by repeated calls to the function \code{efficient.portfolio()}, 
+#' with \code{shorts=FALSE}, for a
+#' grid of target expected returns starting at the expected return of the global minimum variance portfolio 
+#' (not allowing short sales) and ending at the expected return equal to the maximum expected return of 
+#' the assets under consideration.
 #' 
-#' @param er N x 1 vector of expected returns
-#' @param cov.mat N x N return covariance matrix
+#' @param er \samp{N x 1} vector of expected returns
+#' @param cov.mat \samp{N x N} return covariance matrix
 #' @param nport scalar, number of efficient portfolios to compute
-#' @param alpha.min minimum value of alpha, default is -.5
-#' @param alpha.max maximum value of alpha, defualt is 1.5
-#' @param shorts logical, allow shorts is \code{TRUE}
+#' @param alpha.min minimum value of \samp{alpha}, default is \code{-.5}
+#' @param alpha.max maximum value of \samp{alpha}, default is \code{1.5}
+#' @param shorts logical, if \code{TRUE} then short sales (negative portfolio weights)
+#' are allowed. If \code{FALSE} then no asset is allowed to be sold short
 #' 
 #' @return 
 #'  \item{call}{captures function call}
-#'  \item{er}{nport x 1 vector of expected returns on efficient porfolios}
-#'  \item{sd}{nport x 1 vector of std deviations on efficient portfolios}
-#'  \item{weights}{nport x N matrix of weights on efficient portfolios}
+#'  \item{er}{\samp{nport x 1} vector of expected returns of efficient porfolios}
+#'  \item{sd}{\samp{nport x 1} vector of standard deviations of efficient portfolios}
+#'  \item{weights}{\samp{nport x N} matrix of weights of efficient portfolios}
 #' 
 #' @examples
 #' # construct the data

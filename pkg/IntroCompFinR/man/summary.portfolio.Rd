@@ -14,7 +14,9 @@
 \item{...}{additional arguments passed to \code{summary()}}
 }
 \description{
-Summary method of class portfolio.
+Summary method for objects of class \samp{portfolio}. The output is the same
+as the \code{print}. If \code{risk.free} is specified then the portfolio Sharpe
+ratio is also returned.
 }
 \examples{
 # construct the data

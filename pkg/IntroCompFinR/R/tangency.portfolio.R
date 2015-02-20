@@ -3,23 +3,27 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' Compute tangency portfolio.
+#' Compute tangency (maximum Sharpe ratio) portfolio. The portfolio can allow all assets to be shorted
+#' or not allow any assets to be shorted.
 #' 
 #' @details 
-#' The tangency portfolio t is the portfolio of risky assets with the highest Sharpe's slope and
+#' The tangency portfolio \samp{t} is the portfolio of risky assets with the highest Sharpe's slope and
 #' solves the optimization problem: max \eqn{(t(t)\mu-r_f)/(t(t)\Sigma t^{1/2})} s.t. \eqn{t(t)1=1}
-#' where \eqn{r_f} denotes the risk-free rate.
+#' where \eqn{r_f} denotes the risk-free rate. If short sales are allowed then there is an analytic
+#' solution using matrix algebra. If short sales are not allowed then the maximum sharpe ratio portfolio must
+#' be computed numerically.
 #' 
-#' @param er N x 1 vector of expected returns
-#' @param cov.mat N x N return covariance matrix
+#' @param er \samp{N x 1} vector of expected returns
+#' @param cov.mat \samp{N x N} return covariance matrix
 #' @param risk.free numeric, risk free rate
-#' @param shorts logical, allow shorts is \code{TRUE}
+#' @param shorts logical, if \code{TRUE} then short sales (negative portfolio weights)
+#' are allowed. If \code{FALSE} then no asset is allowed to be sold short.
 #' 
 #' @return 
 #'  \item{call}{captures function call}
 #'  \item{er}{portfolio expected return}
 #'  \item{sd}{portfolio standard deviation}
-#'  \item{weights}{N x 1 vector of portfolio weights}
+#'  \item{weights}{\samp{N x 1} vector of portfolio weights}
 #' 
 #' @examples
 #' # construct the data

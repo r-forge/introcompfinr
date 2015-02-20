@@ -3,23 +3,29 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' Compute minimum variance portfolio subject to target return.
+#' Compute minimum variance portfolio subject to target return either allowing all assets
+#' to be sold short or not allowing any asset to be sold short. The returned object is 
+#' of class \samp{portfolio}.
 #' 
 #' @details 
-#' A mean-variance efficient portfolio \eqn{x} that achieves the target expected return \eqn{\mu_0}
+#' A mean-variance efficient portfolio \eqn{x} allowing short sales (negative weights) 
+#' that achieves the target expected return \eqn{\mu_0}
 #' solves the optimization problem: min \eqn{t(x)\Sigma x} s.t. \eqn{t(x)1=1} and 
-#' \eqn{t(x)\mu=\mu_0} 
+#' \eqn{t(x)\mu=\mu_0}, for which there is an analytic solution using matrix algebra. 
+#' If short sales are not allowed then the portfolio is computed numerically using the 
+#' function \code{solve.QP()} from the \samp{quadprog} package.
 #' 
-#' @param er N x 1 vector of expected returns
-#' @param cov.mat N x N return covariance matrix
+#' @param er \samp{N x 1} vector of expected returns
+#' @param cov.mat \samp{N x N} return covariance matrix
 #' @param target.return scalar, target expected return
-#' @param shorts logical, allow shorts is \code{TRUE}
+#' @param shorts logical, if \code{TRUE} then short sales (negative portfolio weights)
+#' are allowed. If \code{FALSE} then no asset is allowed to be sold short.
 #' 
 #' @return 
 #'  \item{call}{captures function call}
 #'  \item{er}{portfolio expected return}
 #'  \item{sd}{portfolio standard deviation}
-#'  \item{weights}{N x 1 vector of portfolio weights}
+#'  \item{weights}{\samp{N x 1} vector of portfolio weights}
 #' 
 #' @examples
 #' # construct the data

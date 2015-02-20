@@ -3,7 +3,7 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' Print method of class portfolio.
+#' Print method for objects of class \samp{portfolio}.
 #' 
 #' @param object object of class portfolio
 #' @param ... additional arguments passed to \code{print()}

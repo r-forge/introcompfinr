@@ -3,7 +3,7 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' Print efficient frontier
+#' Print method for \samp{Markowitz} objects. 
 #' 
 #' @param object object of class Markowitz
 #' @param ... additional arguments passed to \code{print()}

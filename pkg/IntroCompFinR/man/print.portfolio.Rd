@@ -12,7 +12,7 @@
 \item{...}{additional arguments passed to \code{print()}}
 }
 \description{
-Print method of class portfolio.
+Print method for objects of class \samp{portfolio}.
 }
 \examples{
 # construct the data
