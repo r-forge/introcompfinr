@@ -14,12 +14,12 @@ efficient.frontier(er, cov.mat, nport = 20, alpha.min = -0.5,
 
 \item{nport}{scalar, number of efficient portfolios to compute}
 
-\item{alpha.min}{minimum value of \samp{alpha}, default is \code{-.5}}
+\item{alpha.min}{minimum value of \samp{alpha}, default is \samp{-.5}}
 
-\item{alpha.max}{maximum value of \samp{alpha}, default is \code{1.5}}
+\item{alpha.max}{maximum value of \samp{alpha}, default is \samp{1.5}}
 
-\item{shorts}{logical, if \code{TRUE} then short sales (negative portfolio weights)
-are allowed. If \code{FALSE} then no asset is allowed to be sold short}
+\item{shorts}{logical, if \samp{TRUE} then short sales (negative portfolio weights)
+are allowed. If \samp{FALSE} then no asset is allowed to be sold short}
 }
 \value{
 \item{call}{captures function call}
@@ -28,22 +28,21 @@ are allowed. If \code{FALSE} then no asset is allowed to be sold short}
  \item{weights}{\samp{nport x N} matrix of weights of efficient portfolios}
 }
 \description{
-The function constructs the set of mean-variance efficient portfolios that either allow all assets to be
-sold short or not allow any asset to be sold short. The returned object is of class \samp{Markowitz} for
-which there are \code{print}, \code{summary} and \code{plot} methods.
+The function constructs the set of mean-variance efficient portfolios that either allow all
+assets to be sold short or not allow any asset to be sold short. The returned object is of class
+\samp{Markowitz} for which there are \samp{print}, \samp{summary} and \samp{plot} methods.
 }
 \details{
-If short sales are allowed (negative weights) then the set of efficient portfolios of risky assets
-can be computed as a convex combination of
-any two efficient portfolios. It is convenient to use the global minimum variance portfolio as
-one portfolio and an efficient portfolio with target expected return equal to the maximum
-expected return of the assets under consideration as the other portfolio. Call these portfolios
-\eqn{m} and \eqn{x}, respectively. Then for any number \samp{alpha}, another efficient
-portfolio can be computed as \eqn{z=\alpha m+(1-\alpha)x}. If short sales are not allowed, then the set
-of efficient portfolios is computed by repeated calls to the function \code{efficient.portfolio()},
-with \code{shorts=FALSE}, for a
-grid of target expected returns starting at the expected return of the global minimum variance portfolio
-(not allowing short sales) and ending at the expected return equal to the maximum expected return of
+If short sales are allowed (negative weights) then the set of efficient portfolios of risky
+assets can be computed as a convex combination of any two efficient portfolios. It is convenient
+to use the global minimum variance portfolio as one portfolio and an efficient portfolio with
+target expected return equal to the maximum expected return of the assets under consideration as
+the other portfolio. Call these portfolios \eqn{m} and \eqn{x}, respectively. Then for any number
+\samp{alpha}, another efficient portfolio can be computed as \eqn{z=\alpha m+(1-\alpha)x}. If
+short sales are not allowed, then the set of efficient portfolios is computed by repeated calls
+to the function \samp{efficient.portfolio()}, with \samp{shorts=FALSE}, for a grid of target
+expected returns starting at the expected return of the global minimum variance portfolio (not
+allowing short sales) and ending at the expected return equal to the maximum expected return of
 the assets under consideration.
 }
 \examples{

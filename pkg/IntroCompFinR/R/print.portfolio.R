@@ -6,7 +6,7 @@
 #' Print method for objects of class \samp{portfolio}.
 #' 
 #' @param object object of class portfolio
-#' @param ... additional arguments passed to \code{print()}
+#' @param ... additional arguments passed to \samp{print()}
 #' 
 #' @examples
 #' # construct the data

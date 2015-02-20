@@ -3,21 +3,21 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' Compute tangency (maximum Sharpe ratio) portfolio. The portfolio can allow all assets to be shorted
-#' or not allow any assets to be shorted.
+#' Compute tangency (maximum Sharpe ratio) portfolio. The portfolio can allow all assets to be
+#' shorted or not allow any assets to be shorted.
 #' 
 #' @details 
-#' The tangency portfolio \samp{t} is the portfolio of risky assets with the highest Sharpe's slope and
-#' solves the optimization problem: max \eqn{(t(t)\mu-r_f)/(t(t)\Sigma t^{1/2})} s.t. \eqn{t(t)1=1}
-#' where \eqn{r_f} denotes the risk-free rate. If short sales are allowed then there is an analytic
-#' solution using matrix algebra. If short sales are not allowed then the maximum sharpe ratio portfolio must
-#' be computed numerically.
+#' The tangency portfolio \samp{t} is the portfolio of risky assets with the highest Sharpe's slope
+#' and solves the optimization problem: max \eqn{(t(t)\mu-r_f)/(t(t)\Sigma t^{1/2})} s.t.
+#' \eqn{t(t)1=1} where \eqn{r_f} denotes the risk-free rate. If short sales are allowed then there
+#' is an analytic solution using matrix algebra. If short sales are not allowed then the maximum
+#' Sharpe ratio portfolio must be computed numerically.
 #' 
 #' @param er \samp{N x 1} vector of expected returns
 #' @param cov.mat \samp{N x N} return covariance matrix
 #' @param risk.free numeric, risk free rate
-#' @param shorts logical, if \code{TRUE} then short sales (negative portfolio weights)
-#' are allowed. If \code{FALSE} then no asset is allowed to be sold short.
+#' @param shorts logical, if \samp{TRUE} then short sales (negative portfolio weights)
+#' are allowed. If \samp{FALSE} then no asset is allowed to be sold short.
 #' 
 #' @return 
 #'  \item{call}{captures function call}

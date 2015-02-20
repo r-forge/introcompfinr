@@ -9,7 +9,7 @@
 \arguments{
 \item{object}{object of class Markowitz}
 
-\item{...}{additional arguments passed to \code{print()}}
+\item{...}{additional arguments passed to \samp{print()}}
 }
 \description{
 Print method for \samp{Markowitz} objects.

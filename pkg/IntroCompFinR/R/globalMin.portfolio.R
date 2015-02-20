@@ -3,21 +3,20 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' Compute global minimum variance portfolio given expected return vector and 
-#' covariance matrix. The portfolio can allow all assets to be shorted
-#' or not allow any assets to be shorted. The returned object is of class \samp{portfolio}.
+#' Compute global minimum variance portfolio given expected return vector and covariance matrix. The
+#' portfolio can allow all assets to be shorted or not allow any assets to be shorted. The returned
+#' object is of class \samp{portfolio}.
 #' 
 #' @details 
 #' The global minimum variance portfolio \eqn{m} allowing for short sales solves the optimization
-#' problem: min \eqn{t(m)\Sigma m} s.t. \eqn{t(m)1=1} for which there is an analytic solution
-#' using matrix algebra. If short sales are not allowed
-#' then the portfolio is computed numerically using the function \code{solve.QP()}
-#' from the \samp{quadprog} package.
+#' problem: min \eqn{t(m)\Sigma m} s.t. \eqn{t(m)1=1} for which there is an analytic solution using
+#' matrix algebra. If short sales are not allowed then the portfolio is computed numerically using
+#' the function \samp{solve.QP()} from the \samp{quadprog} package.
 #' 
 #' @param er \samp{N x 1} vector of expected returns
 #' @param cov.mat \samp{N x N} return covariance matrix
-#' @param shorts logical, if \code{TRUE} then short sales (negative portfolio weights)
-#' are allowed. If \code{FALSE} then no asset is allowed to be sold short.
+#' @param shorts logical, if \samp{TRUE} then short sales (negative portfolio weights)
+#' are allowed. If \samp{FALSE} then no asset is allowed to be sold short.
 #' 
 #' @return 
 #'  \item{call}{captures function call}

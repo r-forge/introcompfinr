@@ -13,8 +13,8 @@ tangency.portfolio(er, cov.mat, risk.free, shorts = TRUE)
 
 \item{risk.free}{numeric, risk free rate}
 
-\item{shorts}{logical, if \code{TRUE} then short sales (negative portfolio weights)
-are allowed. If \code{FALSE} then no asset is allowed to be sold short.}
+\item{shorts}{logical, if \samp{TRUE} then short sales (negative portfolio weights)
+are allowed. If \samp{FALSE} then no asset is allowed to be sold short.}
 }
 \value{
 \item{call}{captures function call}
@@ -23,15 +23,15 @@ are allowed. If \code{FALSE} then no asset is allowed to be sold short.}
  \item{weights}{\samp{N x 1} vector of portfolio weights}
 }
 \description{
-Compute tangency (maximum Sharpe ratio) portfolio. The portfolio can allow all assets to be shorted
-or not allow any assets to be shorted.
+Compute tangency (maximum Sharpe ratio) portfolio. The portfolio can allow all assets to be
+shorted or not allow any assets to be shorted.
 }
 \details{
-The tangency portfolio \samp{t} is the portfolio of risky assets with the highest Sharpe's slope and
-solves the optimization problem: max \eqn{(t(t)\mu-r_f)/(t(t)\Sigma t^{1/2})} s.t. \eqn{t(t)1=1}
-where \eqn{r_f} denotes the risk-free rate. If short sales are allowed then there is an analytic
-solution using matrix algebra. If short sales are not allowed then the maximum sharpe ratio portfolio must
-be computed numerically.
+The tangency portfolio \samp{t} is the portfolio of risky assets with the highest Sharpe's slope
+and solves the optimization problem: max \eqn{(t(t)\mu-r_f)/(t(t)\Sigma t^{1/2})} s.t.
+\eqn{t(t)1=1} where \eqn{r_f} denotes the risk-free rate. If short sales are allowed then there
+is an analytic solution using matrix algebra. If short sales are not allowed then the maximum
+Sharpe ratio portfolio must be computed numerically.
 }
 \examples{
 # construct the data

@@ -12,10 +12,10 @@
 \item{risk.free}{numeric, risk free rate}
 }
 \description{
-Summary method for objects of class \samp{Markowitz}. For all portfolios on the efficient frontier,
-the expected return, standard deviation and asset weights are shown. If \code{risk.free} is given then
-efficient portfolios that are combinations of the risk free asset and the tangency portfolio are computed. The
-class \code{summary.Markozitz} will be created.
+Summary method for objects of class \samp{Markowitz}. For all portfolios on the efficient
+frontier, the expected return, standard deviation and asset weights are shown. If
+\samp{risk.free} is given then efficient portfolios that are combinations of the risk free asset
+and the tangency portfolio are computed. The class \samp{summary.Markozitz} will be created.
 }
 \examples{
 # construct the data

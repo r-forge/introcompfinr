@@ -11,12 +11,11 @@
 
 \item{risk.free}{numeric, risk free rate}
 
-\item{...}{additional arguments passed to \code{summary()}}
+\item{...}{additional arguments passed to \samp{summary()}}
 }
 \description{
-Summary method for objects of class \samp{portfolio}. The output is the same
-as the \code{print}. If \code{risk.free} is specified then the portfolio Sharpe
-ratio is also returned.
+Summary method for objects of class \samp{portfolio}. The output is the same as the \samp{print}.
+If \samp{risk.free} is specified then the portfolio Sharpe ratio is also returned.
 }
 \examples{
 # construct the data

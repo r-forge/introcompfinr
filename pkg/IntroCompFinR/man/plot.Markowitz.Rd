@@ -9,14 +9,14 @@
 \arguments{
 \item{object}{object of class Markowitz}
 
-\item{plot.assets}{if \code{TRUE} then plot asset \code{sd} and \code{er} with asset name labels}
+\item{plot.assets}{if \samp{TRUE} then plot asset \samp{sd} and \samp{er} with asset name labels}
 
-\item{...}{additional arguments passed to \code{plot()}}
+\item{...}{additional arguments passed to \samp{plot()}}
 }
 \description{
-Plot efficient frontier. The efficient frontier is a plot of portfolio expected return vs. portfolio
-standard deviation for a collection of mean-variance efficient portfolios - portfolios that minimize vriance
-subject to a target expected return.
+Plot efficient frontier. The efficient frontier is a plot of portfolio expected return vs.
+portfolio standard deviation for a collection of mean-variance efficient portfolios - portfolios
+that minimize variance subject to a target expected return.
 }
 \examples{
 # construct the data

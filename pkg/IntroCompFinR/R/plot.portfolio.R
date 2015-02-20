@@ -3,10 +3,10 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' The \code{plot()} method shows a bar chart of the portfolio weights.
+#' The \samp{plot()} method shows a bar chart of the portfolio weights.
 #' 
 #' @param object object of class portfolio
-#' @param ... additional arguments passed to \code{barplot()}
+#' @param ... additional arguments passed to \samp{barplot()}
 #' 
 #' @examples
 #' # construct the data

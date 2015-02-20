@@ -3,13 +3,12 @@
 #' @author Eric Zivot
 #' 
 #' @description
-#' Summary method for objects of class \samp{portfolio}. The output is the same
-#' as the \code{print}. If \code{risk.free} is specified then the portfolio Sharpe
-#' ratio is also returned.
+#' Summary method for objects of class \samp{portfolio}. The output is the same as the \samp{print}.
+#' If \samp{risk.free} is specified then the portfolio Sharpe ratio is also returned.
 #' 
 #' @param object object of class portfolio
 #' @param risk.free numeric, risk free rate
-#' @param ... additional arguments passed to \code{summary()}
+#' @param ... additional arguments passed to \samp{summary()}
 #' 
 #' @examples
 #' # construct the data

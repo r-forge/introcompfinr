@@ -9,10 +9,10 @@
 \arguments{
 \item{object}{object of class portfolio}
 
-\item{...}{additional arguments passed to \code{barplot()}}
+\item{...}{additional arguments passed to \samp{barplot()}}
 }
 \description{
-The \code{plot()} method shows a bar chart of the portfolio weights.
+The \samp{plot()} method shows a bar chart of the portfolio weights.
 }
 \examples{
 # construct the data

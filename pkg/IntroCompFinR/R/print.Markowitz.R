@@ -6,7 +6,7 @@
 #' Print method for \samp{Markowitz} objects. 
 #' 
 #' @param object object of class Markowitz
-#' @param ... additional arguments passed to \code{print()}
+#' @param ... additional arguments passed to \samp{print()}
 #' 
 #' @examples
 #' # construct the data
