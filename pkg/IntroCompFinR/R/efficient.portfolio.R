@@ -88,7 +88,7 @@ function(er, cov.mat, target.return, shorts=TRUE)
     dvec <- rep.int(0, N)
     Amat <- cbind(rep(1,N), er, diag(1,N))
     bvec <- c(1, target.return, rep(0,N))
-    result <- solve.QP(Dmat=Dmat,dvec=dvec,Amat=Amat,bvec=bvec,meq=2)
+    result <- quadprog::solve.QP(Dmat=Dmat,dvec=dvec,Amat=Amat,bvec=bvec,meq=2)
     w <- round(result$solution, 6)
   } else {
     stop("shorts needs to be logical. For no-shorts, shorts=FALSE.")

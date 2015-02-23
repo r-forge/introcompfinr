@@ -4,10 +4,10 @@
 \alias{print.portfolio}
 \title{Print method of class portfolio}
 \usage{
-\method{print}{portfolio}(object, ...)
+\method{print}{portfolio}(x, ...)
 }
 \arguments{
-\item{object}{object of class portfolio}
+\item{x}{object of class portfolio}
 
 \item{...}{additional arguments passed to \samp{print()}}
 }

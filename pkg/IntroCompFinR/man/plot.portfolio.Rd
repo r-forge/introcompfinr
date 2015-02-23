@@ -4,10 +4,10 @@
 \alias{plot.portfolio}
 \title{Plot method of class portfolio}
 \usage{
-\method{plot}{portfolio}(object, ...)
+\method{plot}{portfolio}(x, ...)
 }
 \arguments{
-\item{object}{object of class portfolio}
+\item{x}{object of class portfolio}
 
 \item{...}{additional arguments passed to \samp{barplot()}}
 }

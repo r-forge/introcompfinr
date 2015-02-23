@@ -5,7 +5,7 @@
 #' @description
 #' Print method for objects of class \samp{portfolio}.
 #' 
-#' @param object object of class portfolio
+#' @param x object of class portfolio
 #' @param ... additional arguments passed to \samp{print()}
 #' 
 #' @examples
@@ -28,13 +28,13 @@
 #' @export print.portfolio
 
 print.portfolio <-
-function(object, ...)
+function(x, ...)
 {
   cat("Call:\n")
-  print(object$call, ...)
-  cat("\nPortfolio expected return:    ", format(object$er, ...), "\n")
-  cat("Portfolio standard deviation: ", format(object$sd, ...), "\n")
+  print(x$call, ...)
+  cat("\nPortfolio expected return:    ", format(x$er, ...), "\n")
+  cat("Portfolio standard deviation: ", format(x$sd, ...), "\n")
   cat("Portfolio weights:\n")
-  print(round(object$weights,4), ...)
-  invisible(object)
+  print(round(x$weights,4), ...)
+  invisible(x)
 }

@@ -5,7 +5,7 @@
 #' @description
 #' Print method for \samp{Markowitz} objects. 
 #' 
-#' @param object object of class Markowitz
+#' @param x object of class Markowitz
 #' @param ... additional arguments passed to \samp{print()}
 #' 
 #' @examples
@@ -34,13 +34,13 @@
 #' @export print.Markowitz
 
 print.Markowitz <-
-function(object, ...)
+function(x, ...)
 {
   cat("Call:\n")
-  print(object$call)
-  xx <- rbind(object$er,object$sd)
+  print(x$call)
+  xx <- rbind(x$er,x$sd)
   dimnames(xx)[[1]] <- c("ER","SD")
   cat("\nFrontier portfolios' expected returns and standard deviations\n")
   print(round(xx,4), ...)
-  invisible(object)
+  invisible(x)
 }

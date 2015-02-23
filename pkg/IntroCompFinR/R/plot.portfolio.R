@@ -5,7 +5,7 @@
 #' @description
 #' The \samp{plot()} method shows a bar chart of the portfolio weights.
 #' 
-#' @param object object of class portfolio
+#' @param x object of class portfolio
 #' @param ... additional arguments passed to \samp{barplot()}
 #' 
 #' @examples
@@ -28,10 +28,10 @@
 #' @export plot.portfolio
 
 plot.portfolio <-
-function(object, ...)
+function(x, ...)
 {
-  asset.names <- names(object$weights)
-  barplot(object$weights, names=asset.names,
+  asset.names <- names(x$weights)
+  barplot(x$weights, names=asset.names,
 	  xlab="Assets", ylab="Weight", main="Portfolio Weights", ...)
   invisible()
 }

@@ -4,12 +4,14 @@
 \alias{summary.Markowitz}
 \title{Summary method of class Markowitz}
 \usage{
-\method{summary}{Markowitz}(object, risk.free = NULL)
+\method{summary}{Markowitz}(object, risk.free = NULL, ...)
 }
 \arguments{
 \item{object}{object of class Markowitz}
 
 \item{risk.free}{numeric, risk free rate}
+
+\item{...}{additional arguments passed to \samp{summary()}}
 }
 \description{
 Summary method for objects of class \samp{Markowitz}. For all portfolios on the efficient

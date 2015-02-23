@@ -4,10 +4,10 @@
 \alias{plot.Markowitz}
 \title{Plot method of class Markowitz}
 \usage{
-\method{plot}{Markowitz}(object, plot.assets = FALSE, ...)
+\method{plot}{Markowitz}(x, plot.assets = FALSE, ...)
 }
 \arguments{
-\item{object}{object of class Markowitz}
+\item{x}{object of class Markowitz}
 
 \item{plot.assets}{if \samp{TRUE} then plot asset \samp{sd} and \samp{er} with asset name labels}
 

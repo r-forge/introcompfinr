@@ -10,6 +10,7 @@
 #' 
 #' @param object object of class Markowitz
 #' @param risk.free numeric, risk free rate
+#' @param ... additional arguments passed to \samp{summary()}
 #' 
 #' @examples
 #' # construct the data
@@ -37,7 +38,7 @@
 #' @export summary.Markowitz
 
 summary.Markowitz <-
-function(object, risk.free=NULL)
+function(object, risk.free=NULL, ...)
 {
   call <- object$call
   asset.names <- colnames(object$weights)

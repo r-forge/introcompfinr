@@ -7,7 +7,7 @@
 #' portfolio standard deviation for a collection of mean-variance efficient portfolios - portfolios
 #' that minimize variance subject to a target expected return.
 #' 
-#' @param object object of class Markowitz
+#' @param x object of class Markowitz
 #' @param plot.assets if \samp{TRUE} then plot asset \samp{sd} and \samp{er} with asset name labels
 #' @param ... additional arguments passed to \samp{plot()}
 #' 
@@ -45,22 +45,22 @@
 #' @export plot.Markowitz
 
 plot.Markowitz <-
-function(object, plot.assets=FALSE, ...)
+function(x, plot.assets=FALSE, ...)
 {
   if (!plot.assets) {
-     y.lim=c(0,max(object$er))
-     x.lim=c(0,max(object$sd))
-     plot(object$sd,object$er,type="b",xlim=x.lim, ylim=y.lim,
+     y.lim=c(0,max(x$er))
+     x.lim=c(0,max(x$sd))
+     plot(x$sd,x$er,type="b",xlim=x.lim, ylim=y.lim,
           xlab="Portfolio SD", ylab="Portfolio ER", 
           main="Efficient Frontier", ...)
      }
   else {
-	  call = object$call
+	  call = x$call
 	  mu.vals = eval(call$er)
 	  sd.vals = sqrt( diag( eval(call$cov.mat) ) )
-	  y.lim = range(c(0,mu.vals,object$er))
-	  x.lim = range(c(0,sd.vals,object$sd))
-	  plot(object$sd,object$er,type="b", xlim=x.lim, ylim=y.lim,
+	  y.lim = range(c(0,mu.vals,x$er))
+	  x.lim = range(c(0,sd.vals,x$sd))
+	  plot(x$sd,x$er,type="b", xlim=x.lim, ylim=y.lim,
           xlab="Portfolio SD", ylab="Portfolio ER", 
           main="Efficient Frontier", ...)
         text(sd.vals, mu.vals, labels=names(mu.vals))

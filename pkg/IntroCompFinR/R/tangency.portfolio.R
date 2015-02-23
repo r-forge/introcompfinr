@@ -91,7 +91,7 @@ function(er,cov.mat,risk.free, shorts=TRUE)
     er.excess <- er - risk.free
     Amat <- cbind(er.excess, diag(1,N))
     bvec <- c(1, rep(0,N))
-    result <- solve.QP(Dmat=Dmat,dvec=dvec,Amat=Amat,bvec=bvec,meq=1)
+    result <- quadprog::solve.QP(Dmat=Dmat,dvec=dvec,Amat=Amat,bvec=bvec,meq=1)
     w.t <- round(result$solution/sum(result$solution), 6)
   } else {
     stop("Shorts needs to be logical. For no-shorts, shorts=FALSE.")

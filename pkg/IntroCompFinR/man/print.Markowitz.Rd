@@ -4,10 +4,10 @@
 \alias{print.Markowitz}
 \title{Print efficient frontier}
 \usage{
-\method{print}{Markowitz}(object, ...)
+\method{print}{Markowitz}(x, ...)
 }
 \arguments{
-\item{object}{object of class Markowitz}
+\item{x}{object of class Markowitz}
 
 \item{...}{additional arguments passed to \samp{print()}}
 }
