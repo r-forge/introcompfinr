@@ -3,7 +3,7 @@
 \docType{data}
 \name{sbuxMonthlyPrices}
 \alias{sbuxMonthlyPrices}
-\title{Monthly adjusted closing price for Starbucks}
+\title{Monthly adjusted closing price for Starbucks stock}
 \format{A \samp{xts} object on Jan-1993 to Dec-2014 containing:
 \describe{
   \item{SBUX}{adjusted closing price in USD}

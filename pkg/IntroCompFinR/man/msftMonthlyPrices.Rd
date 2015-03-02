@@ -3,7 +3,7 @@
 \docType{data}
 \name{msftMonthlyPrices}
 \alias{msftMonthlyPrices}
-\title{Monthly adjusted closing price for Microsoft}
+\title{Monthly adjusted closing price for Microsoft stock}
 \format{A \samp{xts} object on Jan-1993 to Dec-2014 containing:
 \describe{
   \item{MFST}{adjusted closing price in USD}

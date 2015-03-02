@@ -3,7 +3,7 @@
 \docType{data}
 \name{sp500DailyPrices}
 \alias{sp500DailyPrices}
-\title{Daily adjusted closing price for S&P 500}
+\title{Daily adjusted closing price for S&P 500 index}
 \format{A \samp{xts} object on 1993-01-04 to 2014-12-31 containing:
 \describe{
   \item{SP500}{adjusted closing price in USD}

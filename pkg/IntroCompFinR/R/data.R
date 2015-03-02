@@ -1,4 +1,4 @@
-#' Daily adjusted closing price for Microsoft
+#' Daily adjusted closing price for Microsoft stock
 #'
 #' A \samp{xts} object of daily adjusted closing price for Microsoft from 1993-01-04 to 2014-12-31.
 #'
@@ -10,7 +10,7 @@
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=MSFT+Historical+Prices}
 "msftDailyPrices"
 
-#' Monthly adjusted closing price for Microsoft
+#' Monthly adjusted closing price for Microsoft stock
 #'
 #' A \samp{xts} object of monthly adjusted closing price for Microsoft from Jan-1993 to Dec-2014.
 #'
@@ -22,7 +22,7 @@
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=MSFT+Historical+Prices}
 "msftMonthlyPrices"
 
-#' Daily adjusted closing price for Starbucks
+#' Daily adjusted closing price for Starbucks stock
 #'
 #' A \samp{xts} object of daily adjusted closing price for Starbucks from 1993-01-04 to 2014-12-31.
 #'
@@ -34,7 +34,7 @@
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=SBUX+Historical+Prices}
 "sbuxDailyPrices"
 
-#' Monthly adjusted closing price for Starbucks
+#' Monthly adjusted closing price for Starbucks stock
 #'
 #' A \samp{xts} object of monthly adjusted closing price for Starbucks from Jan-1993 to Dec-2014.
 #'
@@ -46,7 +46,7 @@
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=SBUX+Historical+Prices}
 "sbuxMonthlyPrices"
 
-#' Daily adjusted closing price for S&P 500
+#' Daily adjusted closing price for S&P 500 index
 #'
 #' A \samp{xts} object of daily adjusted closing price for S&P 500 from 1993-01-04 to 2014-12-31.
 #'
@@ -58,7 +58,7 @@
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=\%5EGSPC+Historical+Prices}
 "sp500DailyPrices"
 
-#' Monthly adjusted closing price for S&P 500
+#' Monthly adjusted closing price for S&P 500 index
 #'
 #' A \samp{xts} object of daily adjusted closing price for S&P 500 from Jan-1993 to Dec-2014.
 #'

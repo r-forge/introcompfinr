@@ -3,7 +3,7 @@
 \docType{data}
 \name{sp500MonthlyPrices}
 \alias{sp500MonthlyPrices}
-\title{Monthly adjusted closing price for S&P 500}
+\title{Monthly adjusted closing price for S&P 500 index}
 \format{A \samp{xts} object on Jan-1993 to Dec-2014 containing:
 \describe{
   \item{SP500}{adjusted closing price in USD}
