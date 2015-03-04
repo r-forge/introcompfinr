@@ -2,6 +2,7 @@
 
 export(efficient.frontier)
 export(efficient.portfolio)
+export(fourPanelPlot)
 export(getPortfolio)
 export(globalMin.portfolio)
 export(plot.Markowitz)

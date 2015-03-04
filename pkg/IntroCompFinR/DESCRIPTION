@@ -11,7 +11,6 @@ Description: The package is for the introduction to computational finance in R f
   Moreover, the book coming soon is also based on this package.
 License: GPL-2
 Depends: R (>= 2.12.2), xts
-Imports: quadprog
-Suggests: PerformanceAnalytics
+Imports: quadprog, PerformanceAnalytics
 LazyLoad: yes
 LazyData: true
