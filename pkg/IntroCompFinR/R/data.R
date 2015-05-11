@@ -10,18 +10,6 @@
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=MSFT+Historical+Prices}
 "msftDailyPrices"
 
-#' Monthly adjusted closing price for Microsoft stock
-#'
-#' A \samp{xts} object of monthly adjusted closing price for Microsoft from Jan-1993 to Dec-2014.
-#'
-#' @format A \samp{xts} object on Jan-1993 to Dec-2014 containing:
-#' \describe{
-#'   \item{MFST}{adjusted closing price in USD}
-#' }
-#' Indexed by objects of class: [Date] TZ: UTC.
-#' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=MSFT+Historical+Prices}
-"msftMonthlyPrices"
-
 #' Daily adjusted closing price for Starbucks stock
 #'
 #' A \samp{xts} object of daily adjusted closing price for Starbucks from 1993-01-04 to 2014-12-31.
@@ -34,18 +22,6 @@
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=SBUX+Historical+Prices}
 "sbuxDailyPrices"
 
-#' Monthly adjusted closing price for Starbucks stock
-#'
-#' A \samp{xts} object of monthly adjusted closing price for Starbucks from Jan-1993 to Dec-2014.
-#'
-#' @format A \samp{xts} object on Jan-1993 to Dec-2014 containing:
-#' \describe{
-#'   \item{SBUX}{adjusted closing price in USD}
-#' }
-#' Indexed by objects of class: [Date] TZ: UTC.
-#' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=SBUX+Historical+Prices}
-"sbuxMonthlyPrices"
-
 #' Daily adjusted closing price for S&P 500 index
 #'
 #' A \samp{xts} object of daily adjusted closing price for S&P 500 from 1993-01-04 to 2014-12-31.
@@ -57,18 +33,6 @@
 #' Indexed by objects of class: [Date] TZ: UTC.
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=\%5EGSPC+Historical+Prices}
 "sp500DailyPrices"
-
-#' Monthly adjusted closing price for S&P 500 index
-#'
-#' A \samp{xts} object of daily adjusted closing price for S&P 500 from Jan-1993 to Dec-2014.
-#'
-#' @format A \samp{xts} object on Jan-1993 to Dec-2014 containing:
-#' \describe{
-#'   \item{SP500}{adjusted closing price in USD}
-#' }
-#' Indexed by objects of class: [Date] TZ: UTC.
-#' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=\%5EGSPC+Historical+Prices}
-"sp500MonthlyPrices"
 
 #' Monthly adjusted closing price for Vanguard Mutual Fund
 #'
@@ -99,18 +63,6 @@
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=AMZN+Historical+Prices}
 "amznDailyPrices"
 
-#' Monthly adjusted closing price for Amazon stock
-#'
-#' A \samp{xts} object of monthly adjusted closing price for Amazon from Jan-1998 to Jan-2015.
-#'
-#' @format A \samp{xts} object on Jan-1998 to Jan-2015 containing:
-#' \describe{
-#'   \item{AMZN}{adjusted closing price in USD}
-#' }
-#' Indexed by objects of class: [Date] TZ: UTC.
-#' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=AMZN+Historical+Prices}
-"amznMonthlyPrices"
-
 #' Daily adjusted closing price for Boeing stock
 #'
 #' A \samp{xts} object of daily adjusted closing price for Boeing from Jan-1993 to Jan-2015.
@@ -122,18 +74,6 @@
 #' Indexed by objects of class: [Date] TZ: UTC.
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=BA+Historical+Prices}
 "baDailyPrices"
-
-#' Monthly adjusted closing price for Boeing stock
-#'
-#' A \samp{xts} object of monthly adjusted closing price for Boeing from Jan-1993 to Jan-2015.
-#'
-#' @format A \samp{xts} object on Jan-1993 to Jan-2015 containing:
-#' \describe{
-#'   \item{BA}{adjusted closing price in USD}
-#' }
-#' Indexed by objects of class: [Date] TZ: UTC.
-#' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=BA+Historical+Prices}
-"baMonthlyPrices"
 
 #' Daily adjusted closing price for Nordstrom stock
 #'
@@ -147,18 +87,6 @@
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=JWN+Historical+Prices}
 "jwnDailyPrices"
 
-#' Monthly adjusted closing price for Nordstrom stock
-#'
-#' A \samp{xts} object of monthly adjusted closing price for Nordstrom from Jan-1993 to Jan-2015.
-#'
-#' @format A \samp{xts} object on Jan-1993 to Jan-2015 containing:
-#' \describe{
-#'   \item{JWN}{adjusted closing price in USD}
-#' }
-#' Indexed by objects of class: [Date] TZ: UTC.
-#' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=JWN+Historical+Prices}
-"jwnMonthlyPrices"
-
 #' Daily adjusted closing price for Costco stock
 #'
 #' A \samp{xts} object of daily adjusted closing price for Costco from Jan-1993 to Jan-2015.
@@ -170,15 +98,3 @@
 #' Indexed by objects of class: [Date] TZ: UTC.
 #' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=COST+Historical+Prices}
 "costDailyPrices"
-
-#' Monthly adjusted closing price for Costco stock
-#'
-#' A \samp{xts} object of monthly adjusted closing price for Costco from Jan-1993 to Jan-2015.
-#'
-#' @format A \samp{xts} object on Jan-1993 to Jan-2015 containing:
-#' \describe{
-#'   \item{COST}{adjusted closing price in USD}
-#' }
-#' Indexed by objects of class: [Date] TZ: UTC.
-#' @source Yahoo! Finance: \url{http://finance.yahoo.com/q/hp?s=COST+Historical+Prices}
-"costMonthlyPrices"
