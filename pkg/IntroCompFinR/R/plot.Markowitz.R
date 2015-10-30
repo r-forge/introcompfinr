@@ -42,7 +42,7 @@
 #' sr.tan = (tan.port$er - r.free)/tan.port$sd
 #' abline(a=r.free, b=sr.tan, col="green", lwd=2)
 #' 
-#' @export plot.Markowitz
+#' @export
 
 plot.Markowitz <-
 function(x, plot.assets=FALSE, ...)

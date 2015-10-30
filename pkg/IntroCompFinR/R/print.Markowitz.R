@@ -31,7 +31,7 @@
 #' attributes(ef)
 #' print(ef)
 #' 
-#' @export print.Markowitz
+#' @export
 
 print.Markowitz <-
 function(x, ...)

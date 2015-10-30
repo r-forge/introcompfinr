@@ -25,7 +25,7 @@
 #' equalWeight.portfolio = getPortfolio(er=er,cov.mat=covmat,weights=ew)
 #' plot(equalWeight.portfolio, col="blue")
 #' 
-#' @export plot.portfolio
+#' @export
 
 plot.portfolio <-
 function(x, ...)

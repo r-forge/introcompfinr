@@ -25,7 +25,7 @@
 #' equalWeight.portfolio = getPortfolio(er=er,cov.mat=covmat,weights=ew)
 #' print(equalWeight.portfolio)
 #' 
-#' @export print.portfolio
+#' @export
 
 print.portfolio <-
 function(x, ...)

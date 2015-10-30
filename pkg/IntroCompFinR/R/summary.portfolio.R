@@ -27,7 +27,7 @@
 #' equalWeight.portfolio = getPortfolio(er=er,cov.mat=covmat,weights=ew)
 #' summary(equalWeight.portfolio)
 #' 
-#' @export summary.portfolio
+#' @export
 
 summary.portfolio <-
 function(object, risk.free=NULL, ...)

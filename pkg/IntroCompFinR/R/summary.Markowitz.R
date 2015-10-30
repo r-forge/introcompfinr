@@ -35,7 +35,7 @@
 #' attributes(ef)
 #' summary(ef)
 #' 
-#' @export summary.Markowitz
+#' @export
 
 summary.Markowitz <-
 function(object, risk.free=NULL, ...)
